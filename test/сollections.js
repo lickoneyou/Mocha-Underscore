@@ -17,4 +17,9 @@ describe("Collections", function () {
       6
     );
   });
+
+  it(`contains_.contains(list, value, [fromIndex]) Aliases: include, includes source
+  Returns true if the value is present in the list. Uses indexOf internally, if list is an Array. Use fromIndex to start your search at a given index.`, function () {
+    assert.deepEqual(_.contains([1, 2, 3, 4, 5, 6], 3), true);
+  });
 });
