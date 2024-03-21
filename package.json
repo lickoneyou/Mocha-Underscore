@@ -18,5 +18,8 @@
   "homepage": "https://github.com/lickoneyou/Mocha-Underscore#readme",
   "devDependencies": {
     "mocha": "^10.3.0"
+  },
+  "dependencies": {
+    "underscore": "^1.13.6"
   }
 }
