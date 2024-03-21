@@ -22,4 +22,19 @@ describe("Collections", function () {
   Returns true if the value is present in the list. Uses indexOf internally, if list is an Array. Use fromIndex to start your search at a given index.`, function () {
     assert.deepEqual(_.contains([1, 2, 3, 4, 5, 6], 3), true);
   });
+
+  it(`pluck_.pluck(list, propertyName) source
+  A convenient version of what is perhaps the most common use-case for map: extracting a list of property values.`, function () {
+    assert.deepEqual(
+      _.pluck(
+        [
+          { name: "moe", age: 40 },
+          { name: "larry", age: 50 },
+          { name: "curly", age: 60 },
+        ],
+        "age"
+      ),
+      [40, 50, 60]
+    );
+  });
 });
