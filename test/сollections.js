@@ -52,4 +52,31 @@ describe("Collections", function () {
       { name: "curly", age: 60 }
     );
   });
+
+  it(`min_.min(list, [iteratee], [context]) source
+  Returns the minimum value in list. If an iteratee function is provided, it will be used on each value to generate the criterion by which the value is ranked. Infinity is returned if list is empty, so an isEmpty guard may be required. This function can currently only compare numbers reliably. This function uses operator < (note).`, function () {
+    assert.deepEqual(
+      _.min(
+        [
+          { name: "moe", age: 40 },
+          { name: "larry", age: 50 },
+          { name: "curly", age: 60 },
+        ],
+        (el) => el.age
+      ),
+      { name: "moe", age: 40 }
+    );
+  });
+
+  it(`size_.size(list) source
+  Return the number of values in the list.`, function () {
+    assert.deepEqual(
+      _.size([
+        { name: "moe", age: 40 },
+        { name: "larry", age: 50 },
+        { name: "curly", age: 60 },
+      ]),
+      3
+    );
+  });
 });
