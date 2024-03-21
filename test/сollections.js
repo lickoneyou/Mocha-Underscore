@@ -37,4 +37,19 @@ describe("Collections", function () {
       [40, 50, 60]
     );
   });
+
+  it(`max_.max(list, [iteratee], [context]) source
+  Returns the maximum value in list. If an iteratee function is provided, it will be used on each value to generate the criterion by which the value is ranked. -Infinity is returned if list is empty, so an isEmpty guard may be required. This function can currently only compare numbers reliably. This function uses operator < (note).`, function () {
+    assert.deepEqual(
+      _.max(
+        [
+          { name: "moe", age: 40 },
+          { name: "larry", age: 50 },
+          { name: "curly", age: 60 },
+        ],
+        (el) => el.age
+      ),
+      { name: "curly", age: 60 }
+    );
+  });
 });
