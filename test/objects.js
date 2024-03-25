@@ -68,4 +68,10 @@ describe("Objects", function () {
     assert.deepEqual(_.isBoolean(true), true);
     assert.deepEqual(_.isBoolean(123), false);
   });
+
+  it(`isDate_.isDate(object) source
+  Returns true if object is a Date.`, function () {
+    assert.deepEqual(_.isDate(new Date()), true);
+    assert.deepEqual(_.isDate(123), false);
+  });
 });
