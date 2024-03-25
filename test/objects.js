@@ -114,4 +114,13 @@ describe("Objects", function () {
     assert.deepEqual(_.isSet(new Set()), true);
     assert.deepEqual(_.isSet(123), false);
   });
+
+  it(`isWeakSet_.isWeakSet(object) source
+  Returns true if object is a WeakSet.`, function () {
+    assert.deepEqual(_.isWeakSet(new Map()), false);
+    assert.deepEqual(_.isWeakSet(new WeakMap()), false);
+    assert.deepEqual(_.isWeakSet(new Set()), false);
+    assert.deepEqual(_.isWeakSet(new WeakSet()), true);
+    assert.deepEqual(_.isWeakSet(123), false);
+  });
 });
