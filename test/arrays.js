@@ -63,4 +63,9 @@ describe("Arrays", function () {
       c: 3,
     });
   });
+
+  it(`range_.range([start], stop, [step]) source
+  A function to create flexibly-numbered lists of integers, handy for each and map loops. start, if omitted, defaults to 0; step defaults to 1 if start is before stop, otherwise -1. Returns a list of integers from start (inclusive) to stop (exclusive), incremented (or decremented) by step.`, function () {
+    assert.deepEqual(_.range(3), [0, 1, 2]);
+  });
 });
