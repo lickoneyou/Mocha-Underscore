@@ -139,4 +139,12 @@ describe("Objects", function () {
     assert.deepEqual(_.isNull(undefined), false);
     assert.deepEqual(_.isNull(null), true);
   });
+
+  it(`isUndefined_.isUndefined(value) source
+  Returns true if value is undefined.`, function () {
+    assert.deepEqual(_.isUndefined(123), false);
+    assert.deepEqual(_.isUndefined(NaN), false);
+    assert.deepEqual(_.isUndefined(undefined), true);
+    assert.deepEqual(_.isUndefined(null), false);
+  });
 });
