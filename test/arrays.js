@@ -11,4 +11,12 @@ describe("Arrays", function () {
   Returns a copy of the array with all instances of the values removed.`, function () {
     assert.deepEqual(_.without([0, 1, false, 2, 3], 1, false), [0, 2, 3]);
   });
+
+  it(`union_.union(*arrays) source
+  Computes the union of the passed-in arrays: the list of unique items, in order, that are present in one or more of the arrays.`, function () {
+    assert.deepEqual(
+      _.union([0, 1, 2, 3], [1, 2, 3, 4, 5], [10, 2, 50]),
+      [0, 1, 2, 3, 4, 5, 10, 50]
+    );
+  });
 });
