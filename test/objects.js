@@ -44,4 +44,16 @@ describe("Objects", function () {
     );
     assert.deepEqual(_.isString("123"), true);
   });
+
+  it(`isNumber_.isNumber(object) source
+  Returns true if object is a Number (including NaN).`, function () {
+    assert.deepEqual(_.isNumber(1), true);
+    assert.deepEqual(_.isNumber({ a: 1 }), false);
+    assert.deepEqual(_.isNumber(_), false);
+    assert.deepEqual(
+      _.isNumber(() => 2),
+      false
+    );
+    assert.deepEqual(_.isNumber("123"), false);
+  });
 });
