@@ -29,4 +29,13 @@ describe("Arrays", function () {
   Produces a duplicate-free version of the array, using === to test object equality. In particular only the first occurrence of each value is kept. If you know in advance that the array is sorted, passing true for isSorted will run a much faster algorithm. If you want to compute unique items based on a transformation, pass an iteratee function.`, function () {
     assert.deepEqual(_.uniq([0, 1, 2, 3, 1, 2, 3, 0, 0, 0]), [0, 1, 2, 3]);
   });
+
+  it(`zip_.zip(*arrays) source
+  Merges together the values of each of the arrays with the values at the corresponding position. Useful when you have separate data sources that are coordinated through matching array indexes.`, function () {
+    assert.deepEqual(_.zip(["a", "b", "c"], [1, 2, 3], [true, true, false]), [
+      ["a", 1, true],
+      ["b", 2, true],
+      ["c", 3, false],
+    ]);
+  });
 });
