@@ -56,4 +56,10 @@ describe("Objects", function () {
     );
     assert.deepEqual(_.isNumber("123"), false);
   });
+
+  it(`isFinite_.isFinite(object) source
+  Returns true if object is a finite Number.`, function () {
+    assert.deepEqual(_.isFinite(1), true);
+    assert.deepEqual(_.isFinite(Infinity), false);
+  });
 });
