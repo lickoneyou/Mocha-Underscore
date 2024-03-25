@@ -38,4 +38,20 @@ describe("Arrays", function () {
       ["c", 3, false],
     ]);
   });
+
+  it(`unzip_.unzip(array) Alias: transpose source
+  The opposite of zip. Given an array of arrays, returns a series of new arrays, the first of which contains all of the first elements in the input arrays, the second of which contains all of the second elements, and so on. If you're working with a matrix of nested arrays, this can be used to transpose the matrix.`, function () {
+    assert.deepEqual(
+      _.unzip([
+        ["a", 1, true],
+        ["b", 2, true],
+        ["c", 3, false],
+      ]),
+      [
+        ["a", "b", "c"],
+        [1, 2, 3],
+        [true, true, false],
+      ]
+    );
+  });
 });
