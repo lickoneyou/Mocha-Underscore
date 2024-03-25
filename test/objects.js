@@ -8,4 +8,8 @@ describe("Objects", function () {
     assert.deepEqual(_.isEmpty([]), true);
   });
 
-})
+  it(`isArray_.isArray(object) source Returns true if object is an Array.`, function () {
+    assert.deepEqual(_.isArray(() => 1), false);
+    assert.deepEqual(_.isArray([]), true);
+  });
+});
