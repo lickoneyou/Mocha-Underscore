@@ -87,4 +87,10 @@ describe("Objects", function () {
     assert.deepEqual(_.isError(new Error()), true);
     assert.deepEqual(_.isError(123), false);
   });
+
+  it(`isSymbol_.isSymbol(object) source
+  Returns true if object is a Symbol.`, function () {
+    assert.deepEqual(_.isSymbol(Symbol()), true);
+    assert.deepEqual(_.isSymbol(123), false);
+  });
 });
