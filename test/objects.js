@@ -18,10 +18,15 @@ describe("Objects", function () {
 
   it(`isObject_.isObject(value) source
   Returns true if value is an Object. Note that JavaScript arrays and functions are objects, while (normal) strings and numbers are not.`, function () {
-    assert.deepEqual(
-      _.isObject(1),
-      false
-    );
+    assert.deepEqual(_.isObject(1), false);
     assert.deepEqual(_.isObject({ a: 1 }), true);
+  });
+
+  it(`isFunction_.c(object) source
+  Returns true if object is a Function.`, function () {
+    assert.deepEqual(_.isFunction(1), false);
+    assert.deepEqual(_.isFunction({ a: 1 }), false);
+    assert.deepEqual(_.isFunction(_), true);
+    assert.deepEqual(_.isFunction(() => 2), true);
   });
 });
