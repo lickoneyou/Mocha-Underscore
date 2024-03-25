@@ -99,4 +99,11 @@ describe("Objects", function () {
     assert.deepEqual(_.isMap(new Map()), true);
     assert.deepEqual(_.isMap(123), false);
   });
+
+  it(`isWeakMap_.isWeakMap(object) source
+  Returns true if object is a WeakMap.`, function () {
+    assert.deepEqual(_.isWeakMap(new Map()), false);
+    assert.deepEqual(_.isWeakMap(new WeakMap()), true);
+    assert.deepEqual(_.isWeakMap(123), false);
+  });
 });
