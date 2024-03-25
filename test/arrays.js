@@ -54,4 +54,13 @@ describe("Arrays", function () {
       ]
     );
   });
+
+  it(`object_.object(list, [values]) source
+  Converts arrays into objects. Pass either a single list of [key, value] pairs, or a list of keys, and a list of values. Passing by pairs is the reverse of pairs. If duplicate keys exist, the last value wins.`, function () {
+    assert.deepEqual(_.object(["a", "b", "c"], [1, 2, 3]), {
+      a: 1,
+      b: 2,
+      c: 3,
+    });
+  });
 });
