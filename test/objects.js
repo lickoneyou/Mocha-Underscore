@@ -9,7 +9,19 @@ describe("Objects", function () {
   });
 
   it(`isArray_.isArray(object) source Returns true if object is an Array.`, function () {
-    assert.deepEqual(_.isArray(() => 1), false);
+    assert.deepEqual(
+      _.isArray(() => 1),
+      false
+    );
     assert.deepEqual(_.isArray([]), true);
+  });
+
+  it(`isObject_.isObject(value) source
+  Returns true if value is an Object. Note that JavaScript arrays and functions are objects, while (normal) strings and numbers are not.`, function () {
+    assert.deepEqual(
+      _.isObject(1),
+      false
+    );
+    assert.deepEqual(_.isObject({ a: 1 }), true);
   });
 });
