@@ -24,4 +24,9 @@ describe("Arrays", function () {
   Similar to without, but returns the values from array that are not present in the other arrays.`, function () {
     assert.deepEqual(_.difference([0, 1, 2, 3], [1, 2, 3, 4, 5]), [0]);
   });
+
+  it(`uniq_.uniq(array, [isSorted], [iteratee]) Alias: unique source
+  Produces a duplicate-free version of the array, using === to test object equality. In particular only the first occurrence of each value is kept. If you know in advance that the array is sorted, passing true for isSorted will run a much faster algorithm. If you want to compute unique items based on a transformation, pass an iteratee function.`, function () {
+    assert.deepEqual(_.uniq([0, 1, 2, 3, 1, 2, 3, 0, 0, 0]), [0, 1, 2, 3]);
+  });
 });
