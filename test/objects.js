@@ -93,4 +93,10 @@ describe("Objects", function () {
     assert.deepEqual(_.isSymbol(Symbol()), true);
     assert.deepEqual(_.isSymbol(123), false);
   });
+
+  it(`isMap_.isMap(object) source
+  Returns true if object is a Map.`, function () {
+    assert.deepEqual(_.isMap(new Map()), true);
+    assert.deepEqual(_.isMap(123), false);
+  });
 });
