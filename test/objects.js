@@ -123,4 +123,12 @@ describe("Objects", function () {
     assert.deepEqual(_.isWeakSet(new WeakSet()), true);
     assert.deepEqual(_.isWeakSet(123), false);
   });
+
+  it(`isNaN_.isNaN(object) source
+  Returns true if object is NaN.
+  Note: this is not the same as the native isNaN function, which will also return true for many other not-number values, such as undefined.`, function () {
+    assert.deepEqual(_.isNaN(123), false);
+    assert.deepEqual(_.isNaN(NaN), true);
+    assert.deepEqual(_.isNaN(undefined), false);
+  });
 });
