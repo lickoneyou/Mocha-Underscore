@@ -81,4 +81,10 @@ describe("Objects", function () {
     assert.deepEqual(_.isRegExp(new RegExp()), true);
     assert.deepEqual(_.isRegExp(123), false);
   });
+
+  it(`isError_.isError(object) source
+  Returns true if object inherits from an Error.`, function () {
+    assert.deepEqual(_.isError(new Error()), true);
+    assert.deepEqual(_.isError(123), false);
+  });
 });
