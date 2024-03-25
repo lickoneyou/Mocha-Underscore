@@ -19,4 +19,9 @@ describe("Arrays", function () {
       [0, 1, 2, 3, 4, 5, 10, 50]
     );
   });
+
+  it(`difference_.difference(array, *others) source
+  Similar to without, but returns the values from array that are not present in the other arrays.`, function () {
+    assert.deepEqual(_.difference([0, 1, 2, 3], [1, 2, 3, 4, 5]), [0]);
+  });
 });
