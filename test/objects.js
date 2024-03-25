@@ -27,6 +27,21 @@ describe("Objects", function () {
     assert.deepEqual(_.isFunction(1), false);
     assert.deepEqual(_.isFunction({ a: 1 }), false);
     assert.deepEqual(_.isFunction(_), true);
-    assert.deepEqual(_.isFunction(() => 2), true);
+    assert.deepEqual(
+      _.isFunction(() => 2),
+      true
+    );
+  });
+
+  it(`isString_.isString(object) source
+  Returns true if object is a String.`, function () {
+    assert.deepEqual(_.isString(1), false);
+    assert.deepEqual(_.isString({ a: 1 }), false);
+    assert.deepEqual(_.isString(_), false);
+    assert.deepEqual(
+      _.isString(() => 2),
+      false
+    );
+    assert.deepEqual(_.isString("123"), true);
   });
 });
