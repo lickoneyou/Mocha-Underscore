@@ -62,4 +62,10 @@ describe("Objects", function () {
     assert.deepEqual(_.isFinite(1), true);
     assert.deepEqual(_.isFinite(Infinity), false);
   });
+
+  it(`isBoolean_.isBoolean(object) source
+  Returns true if object is either true or false.`, function () {
+    assert.deepEqual(_.isBoolean(true), true);
+    assert.deepEqual(_.isBoolean(123), false);
+  });
 });
