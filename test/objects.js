@@ -106,4 +106,12 @@ describe("Objects", function () {
     assert.deepEqual(_.isWeakMap(new WeakMap()), true);
     assert.deepEqual(_.isWeakMap(123), false);
   });
+
+  it(`isSet_.isSet(object) source
+  Returns true if object is a Set.`, function () {
+    assert.deepEqual(_.isSet(new Map()), false);
+    assert.deepEqual(_.isSet(new WeakMap()), false);
+    assert.deepEqual(_.isSet(new Set()), true);
+    assert.deepEqual(_.isSet(123), false);
+  });
 });
