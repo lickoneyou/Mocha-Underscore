@@ -74,4 +74,11 @@ describe("Objects", function () {
     assert.deepEqual(_.isDate(new Date()), true);
     assert.deepEqual(_.isDate(123), false);
   });
+
+  it(`isRegExp_.isRegExp(object) source
+  Returns true if object is a RegExp.`, function () {
+    assert.deepEqual(_.isRegExp(/qe/), true);
+    assert.deepEqual(_.isRegExp(new RegExp()), true);
+    assert.deepEqual(_.isRegExp(123), false);
+  });
 });
