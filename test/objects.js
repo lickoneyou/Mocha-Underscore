@@ -131,4 +131,12 @@ describe("Objects", function () {
     assert.deepEqual(_.isNaN(NaN), true);
     assert.deepEqual(_.isNaN(undefined), false);
   });
+
+  it(`isNull_.isNull(object) source
+  Returns true if the value of object is null.`, function () {
+    assert.deepEqual(_.isNull(123), false);
+    assert.deepEqual(_.isNull(NaN), false);
+    assert.deepEqual(_.isNull(undefined), false);
+    assert.deepEqual(_.isNull(null), true);
+  });
 });
